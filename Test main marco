@@ -1,0 +1,66 @@
+from calcolo_BMI import BMI
+from calcolo_BSA import BSA
+from Acqua import acqua
+from check import check
+from ideal import ideale
+##inserire peso e altezza e sesso
+sesso = str(input("Inserisci il tuo sesso (M) (F): "))
+peso = float(input("Inserire peso in Kg: "))
+altezza = float(input("Inserire altezza: "))
+altezza_m = 0
+altezza_cm = 0
+
+
+
+
+
+altezza_m, altezza_cm, sesso = check(altezza, altezza_m, altezza_cm, sesso)
+
+
+
+
+scelta = -1 
+
+while(scelta != 0):
+    print("-------------------------")
+    print("[0]     Uscita")
+    print()
+    print("\n[1] Calcolo BMI ")
+    print("\n[2] Calcolo BSA ")
+    print("\n[3] Quanta acqua devo bere al giorno? ")
+    print("\n[4] Calcola il mio peso ideale")
+
+    scelta = int(input("\nScegli: "))
+    print("------------------------")
+    print()
+    if(scelta == 0):
+        pass
+
+    elif (scelta == 1):
+        BMI(peso , altezza_m)
+
+    elif (scelta == 2):
+        BSA(peso, altezza_cm)
+
+    elif (scelta == 3):
+        acqua(peso)
+
+    elif (scelta == 4):
+        ideale(altezza_m , sesso)
+        
+
+    else:
+        print("Non capisco, riprova...")
+
+
+
+
+
+
+
+
+
+
+
+
+
